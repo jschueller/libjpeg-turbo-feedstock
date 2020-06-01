@@ -7,7 +7,9 @@ package:
 source:
   url: https://github.com/libjpeg-turbo/libjpeg-turbo/archive/{{ version }}.tar.gz
   sha256: 9310613182cb617ce300a4079bc7fa13f2f31a99c12601af47f77657c0dd8537
-
+  patches:
+    # set macos compatibility-version and current-version
+    - compat.patch
 build:
   number: 1
 
